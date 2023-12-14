@@ -67,6 +67,12 @@
 6. Outcome
    - [Simpler](https://www.youtube.com/watch?v=jMSa9sSZpF8)
    - Better
+     - Our goal was to bring a liberal arts perspective
+     - And a liberal arts audience
+     - To what was a Geeky thing
+     - We introduced fonts
+     - Computer science is a liberal art that everyone should harness
+     - Shouldn't be relegated to 5% of the population
    - Misfits change things
      - They push the human race forward
      - You call them crazy
