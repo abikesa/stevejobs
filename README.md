@@ -52,7 +52,7 @@
          - Alan Turing
          - Grace Hopper
          - Steve Wozniak
-        - Xerox
+        - [Xerox](https://www.youtube.com/watch?v=MqSfFcaluHc) Park: Palo Alto Center
           - Steve says he was blinded by their GUIs and was inspired to produce the Mac
           - But they also had 100 computers that were networked for email in 1979
           - And also had pioneered in object-oriented programming
