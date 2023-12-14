@@ -52,6 +52,12 @@
          - Alan Turing
          - Grace Hopper
          - Steve Wozniak
+        - Xerox
+          - Steve says he was blinded by their GUIs and was inspired to produce the Mac
+          - But they also had 100 computers that were networked for email in 1979
+          - And also had pioneered in object-oriented programming
+          - Internet is the means by which companies learn through `RLHF` + $\text{Iterations}^N$
+          - Of course this is by cutting out middlemen and shortening the feedback loop
      - `Deliverence`
        - Steve delivered Apple from too many products
        - Absence of soul
