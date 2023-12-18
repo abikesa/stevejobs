@@ -27,7 +27,7 @@
          - And resonant affect with consonant sonics
        - Syntax
          - Which begets terse syntax
-       - Meaning
+       - [Values](https://www.youtube.com/watch?v=YM4If6YHN3s)
          - He'd `semantic vision`
    - [Marketing](https://www.youtube.com/watch?v=YM4If6YHN3s)
    - Noisy world
