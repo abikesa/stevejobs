@@ -8,11 +8,15 @@
 
 1. Construct
    - Productline
+     - [Funny, the ship that leaks from the top](https://www.youtube.com/watch?v=IzH54FpWAP0)
+     - I don't understand that
    - Reinforcement learning
    - Customer/Human feedback
    - `Quick response` with simple productline
    - No grand ideas!!!
 2. Language
+   - [Comment](https://www.youtube.com/watch?v=IzH54FpWAP0)
+     - Steve had that special power of speech, he could explain something so coherently and simply
    - Marketing
    - Noisy world
    - Gotta be really clear to the world "about us"
@@ -24,9 +28,18 @@
      - Its who they are
      - What they are about
    - `Branding`
-3. Agent
+4. Agent
    - Steve Jobs
-4. Modifier
+     - Apple's greatest successes have not been in the Fortune 500 companies
+     - Part of that is that we are not very good at going through offices to get to end-users
+     - There are 500 men and women in the Fortune 500, CIOs, that you have to go through
+     - We've never really been good at that
+     - [Not in Apple DNA](https://www.youtube.com/watch?v=IzH54FpWAP0) to go through these offices
+     - Four carriers are telling phone manufacturers what to build; we don't like that
+     - We don't walk through the hallways to reach 500 CIOs
+     - Just so we could reach the end-user
+     - Going directly to the end-user is how we do it
+5. Modifier
    - Compute
      - $\text{Iterate}^N$
    - Supply Chain
@@ -61,10 +74,10 @@
      - `Deliverence`
        - Steve delivered Apple from too many products
        - Absence of soul
-5. Verb
+6. Verb
    - Distribution
    - `Iterate`
-6. Outcome
+7. Outcome
    - [Simpler](https://www.youtube.com/watch?v=jMSa9sSZpF8)
    - Better
      - Our goal was to bring a liberal arts perspective
