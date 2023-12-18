@@ -29,7 +29,7 @@
          - Which begets terse syntax
        - Meaning
          - He'd `semantic vision`
-   - Marketing
+   - [Marketing](https://www.youtube.com/watch?v=YM4If6YHN3s)
    - Noisy world
    - Gotta be really clear to the world "about us"
    - Our values
