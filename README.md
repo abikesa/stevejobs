@@ -15,6 +15,12 @@
    - `Quick response` with simple productline
    - No grand ideas!!!
 2. Language
+   - Broadcast + iPod = Podcast
+     - Did ya know?
+     - Now that is Semantics
+     - You're not using spectrum, its internet
+     - And therefore no FCC regulation
+     - Worldwide
    - [Comment](https://www.youtube.com/watch?v=IzH54FpWAP0)
      - Steve had that special power of speech, he could explain something so coherently and simply
    - Marketing
