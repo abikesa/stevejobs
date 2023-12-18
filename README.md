@@ -40,7 +40,7 @@
      - Its who they are
      - What they are about
    - `Branding`
-4. Agent
+3. Agent
    - Steve Jobs
      - Apple's greatest successes have not been in the Fortune 500 companies
      - Part of that is that we are not very good at going through offices to get to end-users
@@ -51,7 +51,7 @@
      - We don't walk through the hallways to reach 500 CIOs
      - Just so we could reach the end-user
      - Going directly to the end-user is how we do it
-5. Modifier
+4. Modifier
    - Compute
      - $\text{Iterate}^N$
    - Supply Chain
@@ -86,10 +86,10 @@
      - `Deliverence`
        - Steve delivered Apple from too many products
        - Absence of soul
-6. Verb
+5. Verb
    - Distribution
    - `Iterate`
-7. Outcome
+6. [Outcome](https://www.youtube.com/watch?v=dXO0fSCEv5A)
    - [Simpler](https://www.youtube.com/watch?v=jMSa9sSZpF8)
    - Better
      - Our goal was to bring a liberal arts perspective
