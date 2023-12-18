@@ -23,6 +23,12 @@
      - Worldwide
    - [Comment](https://www.youtube.com/watch?v=IzH54FpWAP0)
      - Steve had that special power of speech, he could explain something so coherently and simply
+       - Phonetics
+         - And resonant affect with consonant sonics
+       - Syntax
+         - Which begets terse syntax
+       - Meaning
+         - He'd `semantic vision`
    - Marketing
    - Noisy world
    - Gotta be really clear to the world "about us"
