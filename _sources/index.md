@@ -17,7 +17,7 @@
 width: 1px
 height: 1px
 ---
-_The House of Suntori_ represents the epitome of Japanese whisky craftsmanship, blending tradition and innovation. Founded in 1899, it has become a symbol of meticulous artistry, where each bottle tells a story of heritage and mastery. This figure embodies the essence of Suntori's philosophy, harmonizing nature and spirit in every drop.
+_The House of Suntori_ represents the epitome of Japanese whisky [craftsmanship](stevejobs.md), blending tradition and innovation. Founded in 1899, it has become a symbol of meticulous artistry, where each bottle tells a story of heritage and mastery. This figure embodies the essence of Suntori's philosophy, harmonizing nature and spirit in every drop.
 ```
 
 > _landing {ref}`abc-landing`_      
