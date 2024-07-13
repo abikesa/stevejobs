@@ -1,0 +1,5 @@
+/* Adjust the size of the logo */
+.navbar .navbar-brand img {
+  max-height: 10px !important; /* Adjust the height as needed */
+  width: auto !important;
+}
