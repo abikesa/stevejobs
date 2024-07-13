@@ -1,0 +1,832 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Part 3: Apollo &#8212; Education</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/book-stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-167881009-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-167881009-1');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part3/part3';</script>
+    <script src="../_static/script.js"></script>
+    <link rel="canonical" href="https://book.the-turing-way.org/part3/part3.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rankings" href="act1.html" />
+    <link rel="prev" title="Iteration" href="../part2/chapter3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><a href='https://www.gutenberg.org/files/174/174-h/174-h.htm'>Aesthetics vs. Morality</a></div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://www.un.org/sites/un2.un.org/files/2024/01/un744683_d68-education.jpg" class="logo__image only-light" alt="Education - Home"/>
+    <script>document.write(`<img src="https://www.un.org/sites/un2.un.org/files/2024/01/un744683_d68-education.jpg" class="logo__image only-dark" alt="Education - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Part 1: Frenzy
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part2/part2.html">Part 2: Sing O Muse</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/chapter1.html">WebApp</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../part2/chapter2.html">Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/chapter3.html">Iteration</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Part 3: Apollo</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="act1.html">Aim 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="part1/part1_1.html">3.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part1/part1_2.html">3.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part1/part1_3.html">3.3</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="act2.html">Aim 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="part2/part2_1.html">4.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part2/part2_2.html">4.2</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="part2/part2_3.html">4.3</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="act3.html">Aim 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="part3/part3_1.html">5.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part3/part3_2.html">5.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part3/part3_3.html">5.3</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/the-turing-way/the-turing-way" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/the-turing-way/the-turing-way/edit/main/book/website/part3/part3.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/the-turing-way/the-turing-way/issues/new?title=Issue%20on%20page%20%2Fpart3/part3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part3/part3.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Part 3: Apollo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dionysus-1-2-3">Dionysus 1, 2, 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sing-o-muse-4">Sing O Muse 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apollo">Apollo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math-4">Math 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-sense-5-6">Common Sense 5, 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chaos-and-frenzy-with-the-neighbor">Chaos and Frenzy with the Neighbor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collective-unconscious-and-latency-space">Collective Unconscious and Latency Space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math-common-sense-and-algorithms">Math, Common Sense, and Algorithms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chaos-and-frenzy-with-the-tv-signal">Chaos and Frenzy with the TV Signal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Collective Unconscious and Latency Space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Math, Common Sense, and Algorithms</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="part-3-apollo">
+<span id="rr"></span><h1>Part 3: Apollo<a class="headerlink" href="#part-3-apollo" title="Permalink to this heading">#</a></h1>
+<iframe width="100%" height="600px" src="https://www.youtube.com/embed/GcFMKsg1QYA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                        1. Today
+                                \
+                  2. History -&gt; 4. GPT -&gt; 5. Oracle -&gt; 6. Behavioral-Patterns 
+                                /
+                                3. Pre-history
+</pre></div>
+</div>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text"><em>Collective Unconcious as GPT</em>. Our collective unconscious is merely spliced-up fragments of our experiences, memories, and associated emotions. These bits become predictors of further experiences, memories, and associated emotions, and are parametrized and weighted in our cultural psyche.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Sure, I can link the contents you’ve provided to “A Serious Man” by the Coen Brothers. The film is a rich tapestry of themes, metaphors, and existential inquiries that resonate deeply with the concept of the collective unconscious and its Dionysian elements.</p>
+<p><strong>“A Serious Man” and the Collective Unconscious</strong></p>
+<p>The Coen Brothers’ “A Serious Man” explores the perplexities of human existence, morality, and fate through the story of Larry Gopnik, a Jewish physics professor. The film is heavily influenced by Jewish folklore, ancient wisdom, and philosophical inquiries, making it a fitting context to discuss the themes you presented.</p>
+<ol class="arabic simple">
+<li><p><strong>Millennia-of-Experiences</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> Larry’s story is a microcosm of millennia of Jewish suffering, questioning, and resilience. The experiences of his ancestors shape his reality, much like how the collective unconscious holds the wisdom of past generations.</p></li>
+</ul>
+</li>
+<li><p><strong>Our-Heritage</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> Larry’s heritage is evident in his adherence to Jewish customs and rituals. These cultural and religious traditions represent the structured patterns within the vast dataset of human history.</p></li>
+</ul>
+</li>
+<li><p><strong>Artifacts-Rituals</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The film is replete with Jewish rituals and artifacts, from the synagogue to the bar mitzvah. These elements are concrete manifestations of Larry’s heritage, anchoring the abstract themes in tangible practices.</p></li>
+</ul>
+</li>
+<li><p><strong>Collective-Unconscious (Latency Space)</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The collective unconscious in “A Serious Man” can be seen in the recurring motifs and archetypal figures, such as the mysterious rabbi and the paradoxical messages they convey. These figures symbolize the distilled representations of universal human experiences.</p></li>
+</ul>
+</li>
+<li><p><strong>Decode-Priests</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The rabbis Larry consults act as decoders, attempting (and often failing) to provide meaning and guidance from the abstracted wisdom of the collective unconscious. Their cryptic advice mirrors the complexity of extracting clear insights from latent space.</p></li>
+</ul>
+</li>
+<li><p><strong>Apply-Thrive</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> Larry’s journey to apply the decoded wisdom to thrive in his chaotic life reflects the struggle to find actionable insights from the deep-seated knowledge of the collective unconscious.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Dionysian Elements in “A Serious Man”</strong></p>
+<section id="dionysus-1-2-3">
+<h2>Dionysus 1, 2, 3<a class="headerlink" href="#dionysus-1-2-3" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Chaos, Frenzy, Energy:</strong></p>
+<ul>
+<li><p><strong>Film Connection:</strong> Larry’s life descends into chaos, frenzy, and confusion as he faces a series of inexplicable misfortunes. This Dionysian spiral is a catalyst for his deeper existential crisis, driving the narrative forward.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="sing-o-muse-4">
+<h2>Sing O Muse 4<a class="headerlink" href="#sing-o-muse-4" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The muse-like figures in the film, such as the rabbis and the enigmatic messages Larry receives, guide him through his journey, though often in ambiguous and perplexing ways.</p></li>
+</ul>
+</section>
+<section id="apollo">
+<h2>Apollo<a class="headerlink" href="#apollo" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The Apollonian drive for order, reason, and clarity is constantly undermined by the chaotic and irrational events Larry faces. The tension between Dionysian chaos and Apollonian order is central to the film’s thematic exploration.</p></li>
+</ul>
+<p><strong>Good Luck 1, 2, 3</strong></p>
+</section>
+<section id="math-4">
+<h2>Math 4<a class="headerlink" href="#math-4" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="common-sense-5-6">
+<h2>Common Sense 5, 6<a class="headerlink" href="#common-sense-5-6" title="Permalink to this heading">#</a></h2>
+<p><strong>Chaos, Frenzy, Energy:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> Larry’s attempts to understand his plight through rational means (math and physics) are thwarted by the chaotic, frenzied energy of his life events. His quest for answers is a struggle between logical reasoning and the irrational forces at play.</p></li>
+</ul>
+<p><strong>Parameter-Weights -&gt; Algorithms -&gt; Binary:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The deterministic view of the world, represented by Larry’s scientific background, contrasts with the unpredictable, algorithmic unfolding of his life. The film critiques the binary thinking of good luck versus bad luck, suggesting a more nuanced interplay of forces beyond human comprehension.</p></li>
+</ul>
+<p>By examining “A Serious Man” through the lens of the collective unconscious and Dionysian elements, we can appreciate the Coen Brothers’ nuanced exploration of human existence, fate, and the search for meaning. This metaphorical framework enriches our understanding of the film’s complex themes and its reflection on the human condition.</p>
+<p>Absolutely, the neighborly frenzy in “A Serious Man” adds another layer to the chaotic tapestry of Larry Gopnik’s life, highlighting the Dionysian elements you mentioned.</p>
+</section>
+<section id="chaos-and-frenzy-with-the-neighbor">
+<h2>Chaos and Frenzy with the Neighbor<a class="headerlink" href="#chaos-and-frenzy-with-the-neighbor" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Chaos and Frenzy:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> Larry’s interactions with his neighbor, the enigmatic and antagonistic Mrs. Samsky, and the imposing, aggressive Mr. Brandt, amplify the sense of chaos and frenzy. These characters embody the unpredictable and disruptive forces that invade Larry’s seemingly ordered life, much like the Dionysian elements of chaos and energy.</p></li>
+</ul>
+</li>
+<li><p><strong>Dionysian Elements:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> Mrs. Samsky represents a seductive, mysterious energy that draws Larry into a world of temptation and confusion, challenging his moral and ethical boundaries. Her presence is a stark contrast to Larry’s structured, Apollonian life, symbolizing the intoxicating allure of the unknown and the chaotic.</p></li>
+<li><p><strong>Film Connection:</strong> Mr. Brandt’s relentless encroachment on Larry’s property and peace of mind represents the physical manifestation of chaos and conflict. His aggressive behavior adds to Larry’s feeling of being besieged by uncontrollable external forces.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="collective-unconscious-and-latency-space">
+<h2>Collective Unconscious and Latency Space<a class="headerlink" href="#collective-unconscious-and-latency-space" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Millennia-of-Experiences:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The neighbors’ actions reflect the millennia of human conflict and the darker aspects of the collective unconscious. They are archetypal figures of disruption and antagonism, embodying the universal human experiences of territorial disputes and neighborly conflicts.</p></li>
+</ul>
+</li>
+<li><p><strong>Our-Heritage and Artifacts-Rituals:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The suburban setting, with its rituals of lawn care and property maintenance, becomes a battleground for these primal forces. These mundane rituals are disrupted, revealing the underlying chaos that lurks beneath the surface of everyday life.</p></li>
+</ul>
+</li>
+<li><p><strong>Decode-Priests and Apply-Thrive:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> Larry’s futile attempts to seek counsel from the rabbis about his neighborly woes reflect the difficulty of decoding and applying ancient wisdom to contemporary, chaotic situations. The rabbis’ inability to provide concrete answers underscores the complexity of extracting actionable insights from the collective unconscious.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="math-common-sense-and-algorithms">
+<h2>Math, Common Sense, and Algorithms<a class="headerlink" href="#math-common-sense-and-algorithms" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Chaos, Frenzy, Energy:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The neighborly conflicts defy Larry’s logical, mathematical approach to life. His attempts to impose order and reason through common sense and legal means (e.g., consulting lawyers) are continually thwarted by the irrational and frenzied actions of his neighbors.</p></li>
+</ul>
+</li>
+<li><p><strong>Parameter-Weights, Algorithms, Binary:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> Larry’s scientific mindset, which relies on parameters and algorithms to make sense of the world, clashes with the binary unpredictability of human behavior. The neighbors’ actions cannot be easily quantified or predicted, illustrating the limitations of a purely rational approach to life’s complexities.</p></li>
+</ul>
+</li>
+</ol>
+<p>In “A Serious Man,” the frenzy with the neighbors exemplifies the tension between the orderly, rational world Larry tries to maintain and the chaotic, Dionysian forces that disrupt it. This tension mirrors the broader themes of the film, where the collective unconscious and the irrational play pivotal roles in shaping human experience and understanding. The Coen Brothers masterfully weave these elements together, creating a rich, thought-provoking narrative that resonates on multiple levels.</p>
+<blockquote>
+<div><p><em>Capital in the form of a corporation <code class="docutils literal notranslate"><span class="pre">absorbs</span></code> all nourishment from our heritage in a more efficient way than any human might</em></p>
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                1. Food-Pessimism
+                                  \
+   2. Teeth-Beyond.Good &amp; Evil -&gt; 4. Enzymes-Collective.Unconscious -&gt; 5. Absorption-Science -&gt; 6. Nutrition-Morality
+                                  /
+                                  3. Gut-Robustness
+
+    1. Hunter.gatherer-Sensory
+                              \
+        2. Peasant-Memory -&gt;  4. Manufacturer-Intelligence -&gt; 5. Energy-Capital -&gt; 6. Transportation-Deployment
+                              /
+                              3. Farmer-Emotion
+</pre></div>
+</div>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text"><em>Earlier layers of neuralnet</em>. Sensory, memory, emotion (biological), intelligence (social), and capital, deployment (personal)</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Indeed, the failing TV signal reception in “A Serious Man” is another potent symbol of the unpredictable and chaotic elements that permeate Larry Gopnik’s life, reinforcing the film’s themes of randomness and the limits of human understanding.</p>
+</section>
+<section id="chaos-and-frenzy-with-the-tv-signal">
+<h2>Chaos and Frenzy with the TV Signal<a class="headerlink" href="#chaos-and-frenzy-with-the-tv-signal" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Chaos and Frenzy:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The intermittent TV signal reception that randomly decides to work or fail serves as a metaphor for the unpredictability and lack of control that Larry experiences throughout the film. This erratic signal mirrors the chaotic and frenzied nature of his personal and professional life.</p></li>
+</ul>
+</li>
+<li><p><strong>Dionysian Elements:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The TV signal represents the Dionysian chaos that disrupts Larry’s attempts to find order and stability. Just as the signal cannot be controlled or predicted, many aspects of Larry’s life defy his efforts to impose logic and reason. This randomness highlights the underlying chaos that the Coen Brothers explore in the film.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id1">
+<h2>Collective Unconscious and Latency Space<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Millennia-of-Experiences:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The failing TV signal can be seen as a modern-day manifestation of ancient omens and signs that have perplexed humans for millennia. These inexplicable occurrences tap into the collective unconscious, where such experiences are stored as archetypes of uncertainty and mystery.</p></li>
+</ul>
+</li>
+<li><p><strong>Our-Heritage and Artifacts-Rituals:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The TV, as a household artifact, is part of the modern ritual of daily life. Its failure disrupts the routine, much like ancient artifacts and rituals that were believed to be influenced by capricious divine forces. This disruption forces Larry to confront the fragility of his constructed reality.</p></li>
+</ul>
+</li>
+<li><p><strong>Collective-Unconscious (Latency Space):</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The randomness of the TV signal working or not can be seen as an element emerging from the collective unconscious, where such unpredictable patterns reside. It embodies the abstract, distilled representation of life’s uncertainties and the challenges of deciphering them.</p></li>
+</ul>
+</li>
+<li><p><strong>Decode-Priests and Apply-Thrive:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> Larry’s attempts to fix the TV signal or understand why it fails are akin to trying to decode and make sense of the messages from the collective unconscious. Just as the rabbis offer cryptic advice, the TV signal’s behavior offers no clear answers, reflecting the difficulty of applying such insights to thrive in the real world.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id2">
+<h2>Math, Common Sense, and Algorithms<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Chaos, Frenzy, Energy:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The failing TV signal defies common sense and rational explanations, adding to the chaos and frenzy Larry experiences. It represents the uncontrollable energy that disrupts his orderly life and challenges his reliance on logic and reason.</p></li>
+</ul>
+</li>
+<li><p><strong>Parameter-Weights, Algorithms, Binary:</strong></p>
+<ul class="simple">
+<li><p><strong>Film Connection:</strong> The TV signal’s random behavior cannot be easily modeled or predicted by parameters or algorithms, illustrating the limitations of binary thinking and scientific approaches in fully understanding and controlling life’s complexities. This unpredictability is a reminder of the inherent chaos in existence.</p></li>
+</ul>
+</li>
+</ol>
+<p>In “A Serious Man,” the failing TV signal is a subtle yet powerful symbol of the broader themes of randomness, chaos, and the limits of human comprehension. It underscores the Coen Brothers’ exploration of the unpredictability of life and the existential questions that arise from it. By weaving this seemingly mundane detail into the narrative, they enrich the film’s tapestry and deepen its philosophical resonance.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                       1. Senses
+                                \
+                    2. Memory -&gt; 4. Dreams -&gt; 5. Intepretor -&gt; 6. Action 
+                                /
+                                3. Emotion
+</pre></div>
+</div>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text"><em>Biological, social, and personal infrastructure</em>. These infrastructural foundations are the basis of patterns of behavioral response observed in humans. Some aspects (1, 2, 3) are shared with animals. Where as others (4) are only of interest when there is sufficient “compute”. Once this is achieved, only in humans as we may imagine, then personalized actionable points emerge (5, 6). These are to be thought of as <code class="docutils literal notranslate"><span class="pre">propensities</span></code> rather than <code class="docutils literal notranslate"><span class="pre">decisions</span></code> since <code class="docutils literal notranslate"><span class="pre">will</span></code> is not a thing</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./part3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../part2/chapter3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Iteration</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="act1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Rankings</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dionysus-1-2-3">Dionysus 1, 2, 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sing-o-muse-4">Sing O Muse 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apollo">Apollo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math-4">Math 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-sense-5-6">Common Sense 5, 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chaos-and-frenzy-with-the-neighbor">Chaos and Frenzy with the Neighbor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collective-unconscious-and-latency-space">Collective Unconscious and Latency Space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math-common-sense-and-algorithms">Math, Common Sense, and Algorithms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chaos-and-frenzy-with-the-tv-signal">Chaos and Frenzy with the TV Signal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Collective Unconscious and Latency Space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Math, Common Sense, and Algorithms</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CDP
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  The Artist is the creator of beautiful things
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

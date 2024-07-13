@@ -1,0 +1,45 @@
+# Dionysus
+format: jb-book
+root: index
+chapters:
+  # Sing O Muse!
+  - file: part2/part2
+    sections:
+      - title: WebApp
+        file: part2/chapter1
+      - title: Deployment
+        file: part2/chapter2
+      - title: Iteration
+        file: part2/chapter3
+
+  # Apollo
+  - file: part3/part3
+    sections:
+      - title: Aim 1
+        file: part3/act1
+        sections:
+          - title: "3.1"
+            file: part3/part1/part1_1
+          - title: "3.2"
+            file: part3/part1/part1_2
+          - title: "3.3"
+            file: part3/part1/part1_3
+      - title: Aim 2
+        file: part3/act2
+        sections:
+          - title: "4.1"
+            file: part3/part2/part2_1
+          - title: "4.2"
+            file: part3/part2/part2_2
+          - title: "4.3"
+            file: part3/part2/part2_3
+      - title: Aim 3
+        file: part3/act3
+        sections:
+          - title: "5.1"
+            file: part3/part3/part3_1
+          - title: "5.2"
+            file: part3/part3/part3_2
+          - title: "5.3"
+            file: part3/part3/part3_3
+      

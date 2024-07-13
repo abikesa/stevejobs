@@ -1,0 +1,729 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Deployment &#8212; Education</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/book-stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-167881009-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-167881009-1');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part2/chapter2';</script>
+    <script src="../_static/script.js"></script>
+    <link rel="canonical" href="https://book.the-turing-way.org/part2/chapter2.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Iteration" href="chapter3.html" />
+    <link rel="prev" title="WebApp" href="chapter1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><a href='https://www.gutenberg.org/files/174/174-h/174-h.htm'>Aesthetics vs. Morality</a></div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://www.un.org/sites/un2.un.org/files/2024/01/un744683_d68-education.jpg" class="logo__image only-light" alt="Education - Home"/>
+    <script>document.write(`<img src="https://www.un.org/sites/un2.un.org/files/2024/01/un744683_d68-education.jpg" class="logo__image only-dark" alt="Education - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Part 1: Frenzy
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part2.html">Part 2: Sing O Muse</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">WebApp</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Iteration</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part3/part3.html">Part 3: Apollo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../part3/act1.html">Aim 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part3/part1/part1_1.html">3.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part3/part1/part1_2.html">3.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part3/part1/part1_3.html">3.3</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../part3/act2.html">Aim 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part3/part2/part2_1.html">4.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part3/part2/part2_2.html">4.2</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../part3/part2/part2_3.html">4.3</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../part3/act3.html">Aim 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part3/part3/part3_1.html">5.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part3/part3/part3_2.html">5.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part3/part3/part3_3.html">5.3</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/the-turing-way/the-turing-way" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/the-turing-way/the-turing-way/edit/main/book/website/part2/chapter2.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/the-turing-way/the-turing-way/issues/new?title=Issue%20on%20page%20%2Fpart2/chapter2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part2/chapter2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Deployment</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#japan-s-cultural-influence-in-the-90s">Japan’s Cultural Influence in the 90s</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cinematic-reflection-of-cultural-fascination">Cinematic Reflection of Cultural Fascination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#japan-s-continuing-cultural-resonance">Japan’s Continuing Cultural Resonance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-last-samurai-2003">The Last Samurai (2003)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memoirs-of-a-geisha-2005">Memoirs of a Geisha (2005)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grudge-2004">The Grudge (2004)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spirited-away-2001">Spirited Away (2001)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kill-bill-volume-1-2003-and-volume-2-2004">Kill Bill: Volume 1 (2003) and Volume 2 (2004)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lost-in-translation-2003">Lost in Translation (2003)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ring-2002">The Ring (2002)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#babel-2006">Babel (2006)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resident-evil-2002">Resident Evil (2002)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-fantasy-the-spirits-within-2001">Final Fantasy: The Spirits Within (2001)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="deployment">
+<span id="fw-aim2"></span><h1>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading">#</a></h1>
+<p>The simultaneous emergence of films like “Lost in Translation” and “Kill Bill,” both featuring significant Japanese settings or influences, can be seen as a symptom rather than a coincidence, reflecting Japan’s cultural peak in the 90s and early 2000s. Here are a few reasons why this happened:</p>
+<section id="japan-s-cultural-influence-in-the-90s">
+<h2>Japan’s Cultural Influence in the 90s<a class="headerlink" href="#japan-s-cultural-influence-in-the-90s" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Economic Boom and Cultural Export</strong>:</p>
+<ul class="simple">
+<li><p>Japan experienced a significant economic boom in the 80s and early 90s, becoming a global economic powerhouse. This economic success translated into increased cultural exports, including anime, video games, fashion, and cuisine, which began to captivate Western audiences.</p></li>
+</ul>
+</li>
+<li><p><strong>Technological Leadership</strong>:</p>
+<ul class="simple">
+<li><p>Japan’s technological advancements, particularly in electronics and entertainment, positioned it as a trendsetter. Products from companies like Sony, Nintendo, and Sega became household names, further embedding Japanese culture into everyday life worldwide.</p></li>
+</ul>
+</li>
+<li><p><strong>Anime and Manga</strong>:</p>
+<ul class="simple">
+<li><p>The global spread of anime and manga in the 90s introduced Western audiences to Japanese aesthetics, narratives, and cultural nuances. Series like “Dragon Ball,” “Sailor Moon,” and “Neon Genesis Evangelion” played a significant role in this cultural diffusion.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="cinematic-reflection-of-cultural-fascination">
+<h2>Cinematic Reflection of Cultural Fascination<a class="headerlink" href="#cinematic-reflection-of-cultural-fascination" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Hollywood’s Interest in Exotic Locales</strong>:</p>
+<ul class="simple">
+<li><p>The fascination with Japanese culture led filmmakers to set their stories in Japan or incorporate Japanese elements, providing Western audiences with a sense of exoticism and novelty.</p></li>
+</ul>
+</li>
+<li><p><strong>Personal Connections of Filmmakers</strong>:</p>
+<ul class="simple">
+<li><p>Sofia Coppola and Quentin Tarantino both had personal and professional interests in Japan. Coppola’s portrayal of Tokyo in “Lost in Translation” reflects a deep appreciation and nuanced understanding of the city’s ambiance. Tarantino’s “Kill Bill” pays homage to Japanese samurai and martial arts films, showcasing his love for Japanese cinema.</p></li>
+</ul>
+</li>
+<li><p><strong>Themes of Displacement and Globalization</strong>:</p>
+<ul class="simple">
+<li><p>Both films explore themes of cultural displacement and the impact of globalization. “Lost in Translation” delves into the alienation felt by foreigners in Tokyo, while “Kill Bill” incorporates cross-cultural elements, blending Western and Eastern cinematic traditions.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="japan-s-continuing-cultural-resonance">
+<h2>Japan’s Continuing Cultural Resonance<a class="headerlink" href="#japan-s-continuing-cultural-resonance" title="Permalink to this heading">#</a></h2>
+<p>Even after its economic peak, Japan’s cultural influence remains significant. The country’s unique blend of tradition and modernity continues to captivate the world, and this enduring allure is reflected in various art forms, including film.</p>
+<p>In conclusion, the prominence of Japanese settings and influences in early 2000s films like “Lost in Translation” and “Kill Bill” is a symptom of Japan’s cultural zenith in the 90s. This period saw an unprecedented global fascination with Japanese culture, which filmmakers adeptly incorporated into their works, resulting in some of the most memorable and culturally resonant films of the time.</p>
+<p>The early 2000s saw a notable influx of films that featured Japanese settings, themes, or cultural elements, further highlighting Japan’s cultural impact during and after its economic peak in the 90s. Here are some additional films that contribute to the pattern:</p>
+</section>
+<section id="the-last-samurai-2003">
+<h2>The Last Samurai (2003)<a class="headerlink" href="#the-last-samurai-2003" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Late 19th century Japan.</p></li>
+<li><p><strong>Synopsis</strong>: This film, starring Tom Cruise, explores the clash between traditional Japanese samurai culture and the encroaching influence of Western modernization. It highlights themes of honor, loyalty, and cultural transition.</p></li>
+<li><p><strong>Cultural Impact</strong>: “The Last Samurai” brought Japanese history and culture to a wide Western audience, emphasizing the allure of samurai ethics and aesthetics.</p></li>
+</ul>
+</section>
+<section id="memoirs-of-a-geisha-2005">
+<h2>Memoirs of a Geisha (2005)<a class="headerlink" href="#memoirs-of-a-geisha-2005" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Early to mid-20th century Japan.</p></li>
+<li><p><strong>Synopsis</strong>: Based on Arthur Golden’s novel, the film follows the life of a young girl who becomes one of Japan’s most celebrated geishas. It delves into the intricacies of geisha culture and the historical backdrop of Japan.</p></li>
+<li><p><strong>Cultural Impact</strong>: The film provided a detailed and visually stunning portrayal of traditional Japanese customs, fashion, and social dynamics, captivating global audiences.</p></li>
+</ul>
+</section>
+<section id="the-grudge-2004">
+<h2>The Grudge (2004)<a class="headerlink" href="#the-grudge-2004" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Contemporary Japan.</p></li>
+<li><p><strong>Synopsis</strong>: A horror film and an adaptation of the Japanese film “Ju-on,” it follows the story of an American nurse living and working in Tokyo who encounters a supernatural curse.</p></li>
+<li><p><strong>Cultural Impact</strong>: This film, along with others like “The Ring” (2002), played a significant role in popularizing J-horror in the West, showcasing unique Japanese horror elements and storytelling styles.</p></li>
+</ul>
+</section>
+<section id="spirited-away-2001">
+<h2>Spirited Away (2001)<a class="headerlink" href="#spirited-away-2001" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Fantasy world inspired by Japanese folklore.</p></li>
+<li><p><strong>Synopsis</strong>: Directed by Hayao Miyazaki, this animated film follows a young girl who becomes trapped in a mystical and fantastical world and must navigate various challenges to return to her own world.</p></li>
+<li><p><strong>Cultural Impact</strong>: “Spirited Away” received global acclaim and won the Academy Award for Best Animated Feature, highlighting the creative prowess of Japanese animation and its ability to convey profound cultural narratives.</p></li>
+</ul>
+</section>
+<section id="kill-bill-volume-1-2003-and-volume-2-2004">
+<h2>Kill Bill: Volume 1 (2003) and Volume 2 (2004)<a class="headerlink" href="#kill-bill-volume-1-2003-and-volume-2-2004" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Various locations, including Japan.</p></li>
+<li><p><strong>Synopsis</strong>: These films, directed by Quentin Tarantino, feature significant Japanese elements, including samurai swords, martial arts, and homage to Japanese cinema.</p></li>
+<li><p><strong>Cultural Impact</strong>: Tarantino’s work celebrated and introduced Japanese film genres, such as chanbara (samurai cinema) and yakuza films, to a broader audience.</p></li>
+</ul>
+</section>
+<section id="lost-in-translation-2003">
+<h2>Lost in Translation (2003)<a class="headerlink" href="#lost-in-translation-2003" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Contemporary Tokyo, Japan.</p></li>
+<li><p><strong>Synopsis</strong>: A drama-comedy that explores the experiences of two Americans in Tokyo, dealing with themes of alienation and cultural dislocation.</p></li>
+<li><p><strong>Cultural Impact</strong>: It offered a unique, intimate look at modern Tokyo, contributing to the Western fascination with Japanese urban culture and lifestyle.</p></li>
+</ul>
+</section>
+<section id="the-ring-2002">
+<h2>The Ring (2002)<a class="headerlink" href="#the-ring-2002" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Contemporary Japan (adapted to American settings in the remake).</p></li>
+<li><p><strong>Synopsis</strong>: A horror film based on the Japanese movie “Ringu,” it follows the story of a cursed videotape that kills its viewers seven days after watching.</p></li>
+<li><p><strong>Cultural Impact</strong>: “The Ring” played a crucial role in bringing Japanese horror (J-horror) to the Western mainstream, leading to a wave of interest in Japanese horror films and remakes.</p></li>
+</ul>
+</section>
+<section id="babel-2006">
+<h2>Babel (2006)<a class="headerlink" href="#babel-2006" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Various global locations, including Japan.</p></li>
+<li><p><strong>Synopsis</strong>: This multi-narrative film directed by Alejandro González Iñárritu includes a storyline set in Japan, focusing on a deaf-mute Japanese girl navigating her life in Tokyo.</p></li>
+<li><p><strong>Cultural Impact</strong>: The film highlights global interconnectedness and includes a poignant depiction of Japanese urban life, blending it with other international narratives.</p></li>
+</ul>
+</section>
+<section id="resident-evil-2002">
+<h2>Resident Evil (2002)<a class="headerlink" href="#resident-evil-2002" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Global settings with significant Japanese influences.</p></li>
+<li><p><strong>Synopsis</strong>: Based on the Japanese video game series, the film follows a group battling a viral outbreak and the resulting zombie apocalypse.</p></li>
+<li><p><strong>Cultural Impact</strong>: The success of this adaptation emphasized the global reach and influence of Japanese video game culture.</p></li>
+</ul>
+</section>
+<section id="final-fantasy-the-spirits-within-2001">
+<h2>Final Fantasy: The Spirits Within (2001)<a class="headerlink" href="#final-fantasy-the-spirits-within-2001" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Setting</strong>: Futuristic and fantastical settings inspired by Japanese aesthetics.</p></li>
+<li><p><strong>Synopsis</strong>: Based on the popular Japanese video game franchise, this film integrates advanced animation techniques to tell a science fiction story.</p></li>
+<li><p><strong>Cultural Impact</strong>: It showcased the technical and creative advancements of Japanese animation studios, contributing to the global recognition of Japanese digital art.</p></li>
+</ul>
+<p>These films collectively indicate a broader trend in the early 2000s where Japanese culture, history, and aesthetics had a significant presence in Western cinema. This phenomenon can be attributed to Japan’s cultural peak in the 90s and its sustained influence through various forms of media, including film, animation, and video games.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./part2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">WebApp</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Iteration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#japan-s-cultural-influence-in-the-90s">Japan’s Cultural Influence in the 90s</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cinematic-reflection-of-cultural-fascination">Cinematic Reflection of Cultural Fascination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#japan-s-continuing-cultural-resonance">Japan’s Continuing Cultural Resonance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-last-samurai-2003">The Last Samurai (2003)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memoirs-of-a-geisha-2005">Memoirs of a Geisha (2005)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grudge-2004">The Grudge (2004)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spirited-away-2001">Spirited Away (2001)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kill-bill-volume-1-2003-and-volume-2-2004">Kill Bill: Volume 1 (2003) and Volume 2 (2004)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lost-in-translation-2003">Lost in Translation (2003)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ring-2002">The Ring (2002)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#babel-2006">Babel (2006)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resident-evil-2002">Resident Evil (2002)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-fantasy-the-spirits-within-2001">Final Fantasy: The Spirits Within (2001)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CDP
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  The Artist is the creator of beautiful things
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
