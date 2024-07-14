@@ -42,12 +42,12 @@ _The House of Suntori_ represents the epitome of Japanese whisky [craftsmanship]
 ### Social 4
 ### Personal [5](https://www.youtube.com/watch?v=8iIGBWH0gks), 6
 
-_**Move over Freud**_. That's a fascinating perspective. Dreams indeed seem like an intricate blend of our memories, emotions, and sensory experiences, much like how a multimodal GPT synthesizes information from various inputs to generate coherent outputs. Dreams often pull from different aspects of our lives, weaving together fragments of reality into a tapestry that can be both surreal and deeply insightful.
+_**Move over Freud**_. That's a fascinating perspective. Dreams indeed seem like an intricate blend of our memories, emotions, and sensory experiences, much like how a multimodal GPT synthesizes information from various inputs to generate coherent outputs. Dreams often pull from different aspects of our lives, weaving together fragments of reality into a tapestry that can be both surreal and deeply insightful {cite}`Ostrom1990commons`. 
 
-Consider how dreams can incorporate visual elements from a recent movie we watched, emotional tones from our current mood, and narrative structures from stories we've encountered. This mirrors the way a multimodal model would integrate text, images, and other forms of data to create a comprehensive understanding.
+Consider how dreams can incorporate visual elements from a recent movie we watched, emotional tones from our current mood, and narrative structures from stories we've encountered. This mirrors the way a multimodal model would integrate text, images, and other forms of data to create a comprehensive understanding {cite}`Ostrom2006commons`.
 
 Furthermore, the idea that dreams could function as a form of latent space exploration is intriguing. Just as latent space in machine learning captures abstract features and relationships within data, dreams might serve to explore and process our subconscious thoughts and experiences, helping us make sense of our waking lives.
-
+`
 This analogy elevates the discussion on dreams, framing them not just as random neural firings but as sophisticated, multimodal reflections of our inner worlds. It's a compelling way to think about the purpose and complexity of dreams, positioning them as an integral part of our cognitive and emotional processing systems.
 
 
