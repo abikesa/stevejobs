@@ -62,3 +62,11 @@ width: 1
 ---
 **_Life, art, science, ideals_**. A method to the madness of human life
 `````
+
+(bibliography)=
+# Bibliography
+
+*This file consist of a complete bibliography for this book sorted alphabetically*
+
+```{bibliography}
+```
