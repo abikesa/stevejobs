@@ -1,10 +1,14 @@
+# Steve Jobs 
 
 ```sh
 mv [a-zA-Z]* 4-dionysian/
 ```
 
-> *[Stay hungry, stay foolish](https://www.youtube.com/watch?v=UF8uR6Z6KLc)*
-> *Remain a hunter-gatherer for life!*
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/UF8uR6Z6KLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+> *stay hungry, stay foolish*            
+> *Remain a hunter-gatherer for life!*                
 
 
                    1. Senses-Hunter.gatherer
@@ -14,14 +18,17 @@ mv [a-zA-Z]* 4-dionysian/
                                             3. Emotion-Farmer
 
 
-### Biological  1, 2, 3
-- **Connecting dots**. Life isn’t deterministic. Roll the dice on what you believe in. Dots will only connect retrospectively (*San Sariff*). But your senses should guide in the midst of all chaos. `Stay hungry`
+### Biological: Connecting Dots  1, 2, 3
+- Hungry. Your senses should guide you in the midst of the chaos of life. Life isn't deterministic. Can't connect dots forward. Caligraphy class in Reed College didn't promise me anything.
+- Foolish. Don't be trapped by dogma, which is the results of other people's thinking
+- Love. Have the courage to follow your intuition, interpreted by love. When I was fired from Apple, the heaviness of being successful was replaced with the freedom of being a beginner again. And this led me to NexT, Pixar, Toy Story, and my wife! Your work and craft will take more of your time than anything else in your life. So it must be guided by love
 
-### Social  4
-- **Love & loss**. I’d been rejected but was still in love. The heaviness of being successful was replaced with the freedom of being free again: Pixar, Toy Story, and met his wife. Apple later bought Next. All this came from being fired. Work takes a lot of your time. `So do great work, don’t settle.` You’ll know when you find it. Keep looking 
+### Social: Greatness  4
+- Restless. So do great work, don’t settle. You’ll know when you find it. Keep looking until you can "Sing O Muse!"
 
-### Personal 5, 6 
-- **Death**. If you live your days like it’s the last, some day it will come to pass. Remembering that I’ll be dead soon has helped me make the best decisions. Fear falls away and you know you have nothing to lose. `Don’t be trapped by dogma: results of other people’s thinking`. Have the courage to follow your intuition. Everything else is secondary. Stay hungry, stay foolish. 
+### Personal: Dogma-Free 5, 6 
+- Death. Remembering that I’ll be dead soon made me live each day like it was the last. 
+- Intuitions. Gave me the courage to follow my` intuition. Everything else is secondary. Stay hungry, stay foolish. 
 
                              1. Hungry
                                       \
