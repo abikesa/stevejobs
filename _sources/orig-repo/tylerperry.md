@@ -1,4 +1,0 @@
-- Coen brothers: The Dude may not emerge from the film as a modern hero, but the schlemiel type gave the Coen brothers a means to evaluate heroism and messianism, and the Dude ultimately comes across as more likable and relatable for his experiences.
-- Tyler Perry: Madea has is the same character, with same name, acted by same person, in variants on a theme across perhaps 15 films. These have made Tyler Perry more financiall successful than anyone in history, save, George Lucas and Steven Spielberg. Yet the black elite remain bothered with him
-- Philosophers: It's clear that the Coen's sample Nietzsche, Jung, and Freud in that order. One finds nihilism and its antidotes (The Dude), archetypes (Modern Non-Hebrew Schlemiel), dreams (sequences in Big Lebowski and others)
-- 
