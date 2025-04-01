@@ -1,0 +1,14 @@
+variable,value_label,categorical,values,base,display_text,scale,min,max
+age,Age,0,AGE,0,Age,1,0,150
+race,race1,1,1b.RACE,1,Race,1,0,1
+race,race2,1,2.RACE,0,Race,1,0,1
+race,race3,1,3.RACE,0,Race,1,0,1
+race,race4,1,4.RACE,0,Race,1,0,1
+race,race5,1,5.RACE,0,Race,1,0,1
+race,race6,1,6.RACE,0,Race,1,0,1
+gender,Male,1,0b.FEMALE,1,Gender,1,0,1
+gender,Female,1,1.FEMALE,0,Gender,1,0,1
+inc,<25,1,1b.ZIPINC_QRTL,1,Zipcode-Based National Income Quartile (percenage),1,0,1
+inc,25-50,1,2.ZIPINC_QRTL,0,Zipcode-Based National Income Quartile (percenage),1,0,1
+inc,50-75,1,3.ZIPINC_QRTL,0,Zipcode-Based National Income Quartile (percenage),1,0,1
+inc,>75,1,4.ZIPINC_QRTL,0,Zipcode-Based National Income Quartile (percenage),1,0,1

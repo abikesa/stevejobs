@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Selection</title>
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Include Papa Parse library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <!-- Placeholder for dynamically loaded scripts -->
+    <script id="dynamic-scripts"></script>
+    <!-- Link to external CSS file using raw.githack.com -->
+    <link rel="stylesheet" href="https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test5/assets/css/style.css">
+    <!-- Link to the external JavaScript file -->
+    <script src="https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test5/assets/js/loadCalculator.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Please choose the calculator to be loaded:</h1>
+        <div class="radio-group" style="text-align: center;">
+            <input type="radio" id="90day" name="calculator" value="90day">
+            <label for="90day">90 Day Calculator</label><br>
+            <input type="radio" id="30year" name="calculator" value="30year">
+            <label for="30year">30 Year Calculator</label><br>
+            <input type="radio" id="hospitalization" name="calculator" value="hospitalization">
+            <label for="hospitalization">Hospitalization</label><br>
+        </div>
+        <button type="button" onclick="loadCalculator()">Load Calculator</button>
+
+        <!-- Placeholder for the calculator content -->
+        <div id="calculator-container"></div>
+    </div>
+</body>
+</html>

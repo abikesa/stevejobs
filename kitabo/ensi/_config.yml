@@ -1,53 +1,40 @@
-#######################################################################################
 # A default configuration that will be loaded for all jupyter books
 # Users are expected to override these values in their own `_config.yml` file.
 # This is also the "master list" of all allowed keys and values.
 
-#######################################################################################
+####################################################################################### https://www.ledr.com/colours/white.jpg
+
 # Book settings
-title                       : Education  # The title of the book. Will be placed in the left navbar.
-author                      : CDP  # The author of the book
+title                       : Dreams # The title of the book. Will be placed in the left navbar.
+author                      :  # The author of the book
 copyright                   : "2025"  # Copyright year to be placed in the footer
-logo                        : "https://www.un.org/sites/un2.un.org/files/2024/01/un744683_d68-education.jpg"  # A path to the book logo
-email                       : "theturingway@gmail.com"
+logo                        : figures/dreams.jpeg # Path to the logo image file
+email                       : "abikesa.sh@gmail.com"
 exclude_patterns            : ["LICENSE.md"]  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
 
-#######################################################################################
+####################################################################################### https://www.ledr.com/colours/white.jpg
 # Execution settings
 execute:
   execute_notebooks         : auto  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
-  cache                     : ""  # A path to the jupyter cache that will be used to store execution artifacs. Defaults to `_build/.jupyter_cache/`
+  cache                     : ""  # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
   exclude_patterns          : ["LICENSE.md"]  # A list of patterns to *skip* in execution (for example a notebook that takes a really long time)
 
-#######################################################################################
+####################################################################################### https://www.ledr.com/colours/white.jpg
 # HTML-specific settings
 html:
-  announcement              : <a href='https://www.gutenberg.org/files/174/174-h/174-h.htm'>Aesthetics vs. Morality</a>
-  favicon                   : "./figures/logo/favicon-32x32.png"  # A path to a favicon image
   navbar_number_sections    : False  # Add a number to each section in your left navbar
-  google_analytics_id       : "UA-167881009-1"  # A GA id that can be used to track book views.
-  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
-  use_repository_button     : true  # Whether to add an "Repository" button to pages. If `true`, repository information in repository: must be filled in
-  use_issues_button         : true # Whether to add an "Open issue" button to pages. If `true`, repository information in repository: must be filled in
-  use_edit_page_button      : true  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
-  baseurl                   : "https://book.the-turing-way.org"  # The base URL where your book will be hosted. Used for creating image previews and social links. for example: https://mypage.com/mybook/
-  extra_navbar              : Visit our <a href="https://github.com/the-turing-way/the-turing-way">GitHub Repository</a>
-    <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
-  extra_footer: |
-    The Artist is the creator of beautiful things
+  home_page_in_navbar       : True  # Whether to include your home page in the left Navigation Bar; I like this!!!!!!!
+  use_repository_button     : False  # Whether to add an "Repository" button to pages. If `true`, repository information in repository: must be filled in
+  use_issues_button         : False  # Whether to add an "Open issue" button to pages. If `true`, repository information in repository: must be filled in
+  use_edit_page_button      : False  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
+  extra_footer              : |
+   Copyright © 2025 Zeus
   comments:
-    hypothesis              : true
-  # ... other settings ...
-  extra_navbar: Visit our <a href="https://github.com/the-turing-way/the-turing-way">GitHub Repository</a>
-    <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
-  extra_footer: |
-    The Artist is the creator of beautiful things
-  comments:
-    hypothesis: true
+    hypothesis              : False # For data collection in top right corner
   extra_css:
     - "_static/custom.css"
 
-#######################################################################################
+####################################################################################### https://www.ledr.com/colours/white.jpg
 # Launch button settings
 launch_buttons:
   notebook_interface        : "classic"  # The interface interactive links will activate ["classic", "jupyterlab"]
@@ -56,7 +43,7 @@ launch_buttons:
   thebelab                  : false  # Add a thebelab button to pages (requires the repository to run on Binder)
 
 repository:
-  url                       : https://github.com/the-turing-way/the-turing-way  # The URL to your book's repository
+  url                       : https://github.com/abikesa/template # The URL to your book's repository
   path_to_book              : "book/website"  # A path to your book's folder, relative to the repository root.
   branch                    : main
 
@@ -65,6 +52,7 @@ repository:
 sphinx:
   extra_extensions          :
       - 'sphinx_panels'
+      - 'sphinxcontrib.bibtex'
   config                    :  # key-value pairs to directly over-ride the Sphinx configuration
     language                : en
     html_show_copyright     : false
@@ -73,7 +61,10 @@ sphinx:
         - 'app.add_directive'
         - 'app.add_role'
     myst_heading_anchors    : 5
-
-
-bibtex_bibfiles:
-    - _bibliography/references.bib
+    bibtex_bibfiles         :
+      - _bibliography/references.bib
+    bibtex_reference_order: 'citation' 
+    bibtex_default_style: 'unsrt' # 'plain' 
+    bibtex_reference_style: 'super' # 'label' # 'author_year' (this worked)
+    bibtex_cite_style: 'super' #'numeric' (for diff. jb version)
+    bibtex_footbibliography_header: ''

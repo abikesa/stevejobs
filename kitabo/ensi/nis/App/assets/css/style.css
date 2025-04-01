@@ -1,0 +1,140 @@
+/* Center all content on the page */
+/*
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+*/
+
+/* Container for the calculator */
+.container {
+  text-align: center; 
+  background-color: white;
+  /*
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  */
+}
+
+/* Title styling */
+h1 {
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Section Names */
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Left alignment for sections after the slide bar */
+form, #riskOutput, #plotDiv {
+  text-align: left;
+}
+
+/* Radio button groups aligned in 3 columns */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;  /* Add space between radio buttons */
+  justify-content: left;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Model Toggle Switch Styles */
+.model-toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px; /* Add space between labels and switch */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+#model1Label, #model2Label {
+  font-size: 14px;
+}
+
+#model1Label {
+  margin-right: 10px; /* Adjust spacing on the right of Model 1 */
+}
+
+#model2Label {
+  margin-left: 10px; /* Adjust spacing on the left of Model 2 */
+}
+
+/* Form and Plot styling */
+form {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1976D2;
+}
+
+#plotDiv {
+  margin-top: 20px;
+}

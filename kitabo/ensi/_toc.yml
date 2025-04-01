@@ -3,43 +3,54 @@ format: jb-book
 root: index
 chapters:
   # Sing O Muse!
-  - file: part2/part2
+  - file: act1/part1
     sections:
-      - title: WebApp
-        file: part2/chapter1
-      - title: Deployment
-        file: part2/chapter2
-      - title: Iteration
-        file: part2/chapter3
+      - title: Life
+        file: act1/chapter1
+      - title: Ecosystem
+        file: act1/chapter2
+      - title: Resilience
+        file: act1/chapter3
+        
+  # Sing O Muse!
+  - file: act2/part2
+    sections:
+      - title: Prometheus
+        file: act2/chapter1
+      - title: Duality
+        file: act2/chapter2
+      - title: Apollo-Dionysus
+        file: act2/chapter3
 
   # Apollo
-  - file: part3/part3
+  - file: act3/part3
     sections:
-      - title: Aim 1
-        file: part3/act1
+      - title: 'Weaponized 🌊'
+        file: act3/act1
         sections:
-          - title: "3.1"
-            file: part3/part1/part1_1
-          - title: "3.2"
-            file: part3/part1/part1_2
-          - title: "3.3"
-            file: part3/part1/part1_3
-      - title: Aim 2
-        file: part3/act2
+          - title: Transvaluation
+            file: act3/part1/part1_1
+          - title: Revolution
+            file: act3/part1/part1_2
+          - title: 'Veiled Resentment'
+            file: act3/part1/part1_3
+      - title: 'Tokenized ⚓️'
+        file: act3/act2
         sections:
-          - title: "4.1"
-            file: part3/part2/part2_1
-          - title: "4.2"
-            file: part3/part2/part2_2
-          - title: "4.3"
-            file: part3/part2/part2_3
-      - title: Aim 3
-        file: part3/act3
+          - title: Freedom-in-Fetters
+            file: act3/part2/part2_1
+          - title: Dancing-in-Chains
+            file: act3/part2/part2_2
+          - title: 'Born-to-Etiquette ☔️'
+            file: act3/part2/part2_3
+      - title: 'Monopolized 🧭'
+        file: act3/act3
         sections:
-          - title: "5.1"
-            file: part3/part3/part3_1
-          - title: "5.2"
-            file: part3/part3/part3_2
-          - title: "5.3"
-            file: part3/part3/part3_3
-      
+          - title: Traditional
+            file: act3/part3/part3_1
+          - title: Normative
+            file: act3/part3/part3_2
+          - title: Stable
+            file: act3/part3/part3_3
+
+  - file: bibliography

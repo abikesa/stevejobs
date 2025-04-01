@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90-Day Mortality Risk Calculator</title>
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Link to external JavaScript files -->
+    <script src="assets/js/modelSwitch.js" defer></script>
+    <script src="assets/js/variableMenu.js" defer></script>
+    <script src="assets/js/riskCalculator.js" defer></script>
+    <script src="assets/js/plotRisk.js" defer></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>90-Day Mortality Risk Calculator</h1>
+
+        <!-- Model Selection Slide Bar -->
+        <div class="model-toggle-container">
+            <span id="model1Label">Model 1</span>
+            <label class="switch">
+                <input type="checkbox" id="modelSwitch" onclick="toggleModel()">
+                <span class="slider round"></span>
+            </label>
+            <span id="model2Label">Model 2</span>
+        </div>
+
+        <!-- Form for Variable Input -->
+        <form id="calculator-form">
+            <h2>Set Variables</h2>
+            
+            <!-- Dynamic content will be generated based on the model selection -->
+            <div id="variable-inputs"></div>
+            
+            <!-- Submit Button ** -->
+            <button type="button" onclick="calculateRisk()">Calculate Risk</button>
+        </form>
+
+        <!-- Output Section for 90-Day Risk -->
+        <h2>90-Day Mortality Risk</h2>
+
+        <!-- Output Section for Scenario Vector ** -->
+        <!-- div id="scenario-vector-display"></div> -->
+
+        <!-- Plot Section -->
+        <div id="mortality-risk-graph-container">
+            <div id="mortality-risk-graph"></div>
+        </div>
+    </div>
+</body>
+</html>

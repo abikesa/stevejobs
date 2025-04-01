@@ -1,0 +1,14 @@
+Variable,Type,id,coefficient
+age,2,age,0.068411678
+gender,1,genderMale,0.717981326
+gender,1,genderFemale,0
+raceEthnicity,1,raceEthnicity1,-0.429578351
+raceEthnicity,1,raceEthnicity2,-0.137973179
+raceEthnicity,1,raceEthnicity3,0
+raceEthnicity,1,raceEthnicity4,0.191581241
+raceEthnicity,1,raceEthnicity5,-0.517312611
+selfRatedHealth,1,selfRatedHealth1,-0.910488978
+selfRatedHealth,1,selfRatedHealth2,-0.463887133
+selfRatedHealth,1,selfRatedHealth3,0
+selfRatedHealth,1,selfRatedHealth4,0.661245512
+selfRatedHealth,1,selfRatedHealth5,1.487498098

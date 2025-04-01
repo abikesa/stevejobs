@@ -1,0 +1,23 @@
+variable,value_label,categorical,values,base,display_text
+race,White,1,1b.race,1,Race
+race,Black,1,2.race,0,Race
+race,Hispanic,1,3.race,0,Race
+race,Other,1,4.race,0,Race
+gender,Male,1,1.gender,0,Gender
+gender,Female,1,2b.gender,1,Gender
+diabete,No,1,0b.diabete,1,Diabetic
+diabete,Yes,1,1.diabete,0,Diabetic
+hypertension,No,1,0b.hypertension,1,Hypertension
+hypertension,Yes,1,1.hypertension,0,Hypertension
+smoke,No,1,0b.smoke,1,Smoking History
+smoke,Yes,1,1.smoke,0,Smoking History
+relation,First-Degree,1,1b.relation,1,Donor's Relationship To Receiver
+relation,Other,1,2.relation,0,Donor's Relationship To Receiver
+education,High School Or Less,1,1.education,0,Education
+education,Attended College,1,2.education,0,Education
+education,Bachelor's,1,3b.education,1,Education
+education,Graduate,1,4.education,0,Education
+age,age,0,e_age_centered,60,Age
+bp_sys,bp_sys,0,bpxsar_new_centered,120,Systolic Blood Pressure
+bmi,bmi,0,bmi_centered,24,BMI
+eGFR,eGFR,0,egfr_centered,90,Estimated Glomerular Filtration Rate

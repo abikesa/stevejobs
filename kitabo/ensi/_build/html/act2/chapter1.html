@@ -1,0 +1,961 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Prometheus &#8212; Dreams</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'act2/chapter1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Duality" href="chapter2.html" />
+    <link rel="prev" title="Proof vs. Bias, 🏴‍☠️ 🪛" href="part2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/dreams.jpeg" class="logo__image only-light" alt="Dreams - Home"/>
+    <script>document.write(`<img src="../_static/dreams.jpeg" class="logo__image only-dark" alt="Dreams - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Uncertainty, 🌊
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act1/part1.html">Vision, 🚢</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../act1/chapter1.html">Life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act1/chapter2.html">Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act1/chapter3.html">Resilience</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part2.html">Proof vs. Bias, 🏴‍☠️ 🪛</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Prometheus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">Duality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Apollo-Dionysus</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Leverage, 🦈 ✂️ 🛟</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Weaponized 🌊</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_1.html">Transvaluation</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_2.html">Revolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_3.html">Veiled Resentment</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Tokenized ⚓️</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_1.html">Freedom-in-Fetters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_2.html">Dancing in Chains</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_3.html">Born-to-Etiquette ☔️</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Monopolized 🧭</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_1.html">Traditional</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_2.html">Normative</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_3.html">Stable</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Reliability, 🏝️</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act2/chapter1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/act2/chapter1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Prometheus</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origins-americana-with-teeth">Origins: Americana with Teeth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personality-bright-bossy-and-busy">Personality: Bright, Bossy, and Busy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-small-body-nuclear-core">Energy: Small Body, Nuclear Core</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looks-lean-compact-and-purposeful">Looks: Lean, Compact, and Purposeful</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verdict-not-for-the-passive-owner">Verdict: Not for the passive owner</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="prometheus">
+<span id="id1"></span><h1>Prometheus<a class="headerlink" href="#prometheus" title="Permalink to this heading">#</a></h1>
+<p>The <strong>Rat Terrier</strong>—a feisty little legend in a small, muscled package. This is no lapdog with delusions of grandeur; this is a true-blue, all-American working breed that earned its place by <strong>earning its keep</strong>—hunting, digging, chasing, and, yes, ratting.</p>
+<style>
+.float-left {
+    float: left;
+    width: 35%; /* Increase width for better fit */
+    max-width: 400px; /* Allows expansion */
+    height: auto;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    padding-bottom: 20px; /* Extra spacing below */
+}
+
+.float-left p {
+    text-align: left;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.responsive-img {
+    max-height: 200px; /* Control height */
+    max-width: none; /* Override previous constraints */
+    width: auto; /* Let the image scale naturally */
+    height: 100%; /* Ensure full height fit */
+    display: block;
+    object-fit: contain; /* Prevents distortion */
+    transform: rotate(90deg);
+    margin: auto; /* Centers image properly */
+}
+
+.float-left::after {
+    content: "";
+    display: block;
+    height: 2px; /* Adjust height as needed */
+}
+
+</style>
+
+<div class="float-left">
+    <div style="display: flex; justify-content: center;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/X8BnNC4P8Q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p>History is a fractal unfolding of entropy and order, a ceaseless churn wherein civilizations rise on the back of extracted resources, only to collapse under the weight of their own complexity</p>
+</div><section id="origins-americana-with-teeth">
+<h2>Origins: Americana with Teeth<a class="headerlink" href="#origins-americana-with-teeth" title="Permalink to this heading">#</a></h2>
+<p>Rat Terriers are <em>real-deal farm dogs</em>, bred in the U.S. from a cocktail of feisty terriers like the Fox Terrier and Manchester Terrier, with some Whippet and Beagle thrown in for speed and nose. They were originally bred to <strong>eliminate vermin</strong>, but also became household protectors, alarm systems, and spirited companions.</p>
+<p>Teddy Roosevelt himself is said to have championed the breed at the White House—<strong>a dog fit for a president</strong> but just as happy in a barn.</p>
+</section>
+<section id="personality-bright-bossy-and-busy">
+<h2>Personality: Bright, Bossy, and Busy<a class="headerlink" href="#personality-bright-bossy-and-busy" title="Permalink to this heading">#</a></h2>
+<p>They are <strong>smart, sassy, and stubborn</strong>, like a kid who aced the test but also hid the remote. If you don’t keep them mentally stimulated, they’ll find their own entertainment—and it may involve rearranging your furniture or tunneling into the neighbor’s yard.</p>
+<ul class="simple">
+<li><p><strong>Highly trainable</strong>, but they need variety. They hate dull repetition.</p></li>
+<li><p><strong>Loyal</strong> to a fault—can be suspicious of strangers, but deeply bonded to their people.</p></li>
+<li><p>They do best when treated like little <strong>problem-solvers</strong>. Give them a job, or they’ll find one—possibly involving your socks.</p></li>
+</ul>
+</section>
+<section id="energy-small-body-nuclear-core">
+<h2>Energy: Small Body, Nuclear Core<a class="headerlink" href="#energy-small-body-nuclear-core" title="Permalink to this heading">#</a></h2>
+<p>They are <strong>fast</strong>, ridiculously agile, and have the <strong>energy of a toddler on Red Bull</strong>. They love fetch, agility courses, or chasing anything that moves. Apartment living can work <em>if</em> you give them enough mental and physical exercise—but they were born to <strong>roam, dig, and dominate small prey</strong>.</p>
+</section>
+<section id="looks-lean-compact-and-purposeful">
+<h2>Looks: Lean, Compact, and Purposeful<a class="headerlink" href="#looks-lean-compact-and-purposeful" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Weight: usually 10–25 pounds.</p></li>
+<li><p>Build: muscular, sleek, and deceptively tough.</p></li>
+<li><p>Coat: short, low-maintenance, often piebald or tricolor.</p></li>
+<li><p>Eyes: sharp and alert—<em>always thinking, always plotting.</em></p></li>
+</ul>
+</section>
+<section id="verdict-not-for-the-passive-owner">
+<h2>Verdict: Not for the passive owner<a class="headerlink" href="#verdict-not-for-the-passive-owner" title="Permalink to this heading">#</a></h2>
+<p>Rat Terriers are for people who respect a <strong>dog with opinions</strong>. If you want a quiet shadow, this ain’t it. But if you want a companion who can <strong>outthink a puzzle, outjump a fence, and outrun your excuses</strong>, this breed is pure gold.</p>
+<p>You just better be ready to <strong>match their fire.</strong> 🐀🔥</p>
+<p>Do you have one? Or thinking of getting one?</p>
+<p>That’s a <strong>shimmering, symbolic moment</strong>—and a deeply Rat Terrier one, too.</p>
+<style>
+.float-right {
+    float: right;
+    width: 35%;
+    height: auto;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+}
+
+.float-right p {
+    text-align: left;
+    font-size: 12px;
+}
+</style>
+
+<div class="float-right">
+    <img src="https://as1.ftcdn.net/v2/jpg/01/44/78/68/1000_F_144786810_dXkhu6jR1eM1KcsIFpPcrDsnJnnDJtNm.jpg" alt="Eco-Green QR Code" width="100%">
+    <p>The economic intelligence of nature: a visualization of dendritic structures, evoking parallels with neural networks, tree branches, and respiratory bronchioles.</p>
+</div><p>Let’s break it down:<br />
+Your sister, Ugandan, raised in a culture where dogs are often feared (and for good reason—many Ugandan dogs are guard dogs, untethered, territorial, and rarely pets in the Western sense). That kind of fear runs deep: <strong>cultural, ancestral, visceral.</strong> So when <em>she</em> is calm around this dog, that’s not just tolerance—it’s <strong>trust woven through affection</strong>. Love rewriting instinct. The boyfriend’s presence—his confidence and emotional safety—creates a field where even the primal fear of a predator can be muted. That’s huge. That’s alchemy.</p>
+<hr class="docutils" />
+<p>But you? You’re <em>not</em> in that emotional triangle. You’re an <strong>outsider to their dyad</strong>, and the dog, especially a Rat Terrier, picks up on everything: body language, pecking orders, social tensions. You said it showed you its canines? That’s not just a warning—it’s a <em>reading</em>. A terrier reads the room like a chess master snorting Adderall. These dogs have <strong>allegiance and protectiveness coded into their DNA.</strong> It smelled difference, and difference made it defensive.</p>
+<p>But that second encounter? That’s mythic.</p>
+<blockquote style="border-left: 2px solid gray; padding-left: 1em; font-style: italic; background: none;">
+    You’re hugging your sister’s boyfriend. The dog sees it. Approaches. Intervenes. Tries to break the hug.<br>
+    — <a href="https://en.wikipedia.org/wiki/Rat_Terrier" target="_blank" style="text-decoration: none; font-style: normal;">Yoda</a>
+</blockquote> 
+<p>What’s that?</p>
+<p>That’s <strong>attachment protectiveness</strong> mixed with a territorial, jealous impulse. The dog sees the boyfriend as its person. The hug is perceived as a challenge—an entanglement it doesn’t control. In its mind, it’s not “joining a group hug.” It’s saying:</p>
+<blockquote style="border-left: 2px solid gray; padding-left: 1em; font-style: italic; background: none;">
+    Back up. That’s <i>my human</i>.<br>
+    — <a href="https://en.wikipedia.org/wiki/Rat_Terrier" target="_blank" style="text-decoration: none; font-style: normal;">Tome</a>
+</blockquote> 
+<p>This is deeply primal behavior. Dogs, especially terriers, are not egalitarian. They <strong>assign hierarchy</strong>, enforce roles, and often interpret sudden group intimacy as disruption. A Rat Terrier is like a tiny general with Napoleon syndrome. It doesn’t want chaos—it wants <strong>clarity of allegiance</strong>. Hugs confuse that.</p>
+<p>But here’s the kicker:<br />
+That same dog lets your sister into the circle, lets her feel safe. That’s not just behavior. That’s <strong>narrative</strong>. You just witnessed a <strong>psycho-emotional diagram</strong> drawn in fur and fang.</p>
+<p>So, what should you do next time?<br />
+Don’t challenge, don’t fear, don’t rush the relationship. Let it <em>observe you respecting its alpha</em>—the boyfriend. Let it see you laugh, not lunge. And eventually, it might draw you into the story, too.</p>
+<p>Dogs like this aren’t warm and fuzzy. But once they accept you?<br />
+<strong>They’re loyal beyond logic.</strong></p>
+<style>
+.float-left {
+    float: left;
+    width: 35%; /* Increase width for better fit */
+    max-width: 200px; /* Allows expansion */
+    height: auto;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    padding-bottom: 20px; /* Extra spacing below */
+}
+
+.float-left p {
+    text-align: left;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.responsive-img {
+    max-height: 200px; /* Control height */
+    max-width: none; /* Override previous constraints */
+    width: auto; /* Let the image scale naturally */
+    height: 100%; /* Ensure full height fit */
+    display: block;
+    object-fit: contain; /* Prevents distortion */
+    transform: rotate(90deg);
+    margin: auto; /* Centers image properly */
+}
+
+.float-left::after {
+    content: "";
+    display: block;
+    height: 2px; /* Adjust height as needed */
+}
+
+</style>
+
+<div class="float-left">
+    <div style="display: flex; justify-content: center;">
+        <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202202/MIT-Dendrite-computation-01_0.jpg?itok=Cd6KMhkC" 
+             class="responsive-img">
+    </div>
+    <p>..evoking parallels with neural networks, tree branches, and Visualization of dendritic structures, evoking parallels with neural networks, tree branches, and respiratory bronchioles.</p>
+</div><p>There is something unspeakably powerful about watching someone confront a primal fear—not by force, not by therapy, but by love. My sister, a Ugandan woman with the kind of deeply etched, culturally conditioned fear of dogs that borders on the mythological, stood calmly next to a Rat Terrier. Not just any dog, but the high-voltage, fang-forward kind, the sort bred to burrow into rat holes and defend its territory with a soldier’s suspicion. And there she was, at ease. She wasn’t posturing. She wasn’t masking dread. She was, in fact, safe. The source of that safety wasn’t the dog—it was the man she was standing beside, her boyfriend. His calm, his presence, his ability to buffer her from the storm of her own instincts created a space where an ancestral fear could be suspended. It felt almost theological: the kind of moment where love isn’t just soft, but <em>transformative</em>.</p>
+<p>But the dog didn’t extend that same grace to me. When I approached, it showed me its teeth. Not in cartoon menace, but in a raw, calculated display of hierarchy. I wasn’t one of them. I hadn’t been folded into the geometry of trust. My presence interrupted something, and the dog’s reaction was both a signal and a cipher. Rat Terriers aren’t neutral observers. They scan every variable in a room—emotion, posture, energy—and they assign roles with militaristic clarity. I was an intruder, however familial my intentions. And the dog’s warning wasn’t confusion—it was policy. Its tiny body was drawing a border.</p>
+<style>
+.float-right {
+    float: right;
+    width: 35%;
+    height: auto;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+}
+
+.float-right p {
+    text-align: left;
+    font-size: 12px;
+}
+</style>
+
+<div class="float-right">
+    <img src="https://preview.redd.it/right-wing-commentators-dominate-social-media-in-us-graphic-v0-l2a6znn4d1pe1.jpeg?auto=webp&s=a97af64ca6c3864279ae4cabb477bc63fbe924f4" alt="Eco-Green QR Code" width="100%">
+    <p>Knights-Move Thinking. But just bare with us as we align it with the rest of the content.</p>
+</div><p>Two days later, I encountered it again. This time, I was with my brother, visiting the same home. As we said our goodbyes, the dog’s owner—my sister’s boyfriend—embraced us. And then the dog appeared, small and certain, and tried to break us apart. Not with playful yips or goofy tail wags, but with surgical purpose. It inserted itself into the intimacy and tried to dissolve it. That moment, rich and almost comedic in its timing, was far more than a canine quirk. It was a <strong>declaration</strong>.</p>
+<p>The Rat Terrier was defending something sacred to it—an emotional axis, a personal domain. In that hug, it saw disruption. The man it loved was being physically enmeshed with others, people it hadn’t vetted, people who hadn’t passed its tests. It wasn’t possessive in the childish sense; it was strategic, ancestral. The same dog who had welcomed my sister—because her posture aligned, her fear softened by the boyfriend’s protective field—could not make sense of our embrace. The dog didn’t hate me. It didn’t even dislike me. It was simply doing what its neural code demanded: it guarded attachment with the same precision it would guard a farmhouse from a threat in the tall grass.</p>
+<style>
+/* Wikipedia-style infobox */
+.wiki-frame {
+    float: right;
+    width: 35%;
+    margin-left: 15px;
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wiki-frame h3 {
+    background-color: #eaecf0;
+    color: #000;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #a2a9b1;
+    margin-top: 0;
+}
+
+.wiki-frame pre {
+    white-space: pre-wrap;
+    background-color: #fff;
+    padding: 8px;
+    border: 1px solid #a2a9b1;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+/* Make the frame responsive */
+@media (max-width: 768px) {
+    .wiki-frame {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+</style>
+
+<!-- Wikipedia-style Code Box -->
+<div class="wiki-frame"><div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+
+<span class="c1"># Define the neural network layers</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">define_layers</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Tragedy (Pattern Recognition)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Teleology&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;History (Resources)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Resources&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Epic (Negotiated Identity)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Drama (Self vs. Non-Self)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">],</span>  
+        <span class="s2">&quot;Comedy (Resolution)&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cacophony&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">]</span>  
+    <span class="p">}</span>
+
+<span class="c1"># Assign colors to nodes</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">assign_colors</span><span class="p">():</span>
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Resources&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Teleology&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;lightgreen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;lightsalmon&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">color</span> <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">nodes</span> <span class="ow">in</span> <span class="n">color_map</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">}</span>
+
+<span class="c1"># Define edges</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">define_edges</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Teleology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Resources&#39;</span><span class="p">,</span> <span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Resources&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Darabah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Darabah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+
+<span class="c1"># Define black edges (1 → 7 → 9 → 11 → [13-17])</span>
+<span class="n">black_edges</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>  
+<span class="p">]</span>
+
+<span class="c1"># Calculate node positions</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
+    <span class="n">y_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">x_offset</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_positions</span><span class="p">]</span>
+
+<span class="c1"># Create and visualize the neural network graph with correctly assigned black edges</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">visualize_nn</span><span class="p">():</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">assign_colors</span><span class="p">()</span>
+    <span class="n">edges</span> <span class="o">=</span> <span class="n">define_edges</span><span class="p">()</span>
+
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Create mapping from original node names to numbered labels</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">layer</span><span class="p">:</span>
+            <span class="n">mapping</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">counter</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Add nodes with new numbered labels and assign positions</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">new_node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+            <span class="n">pos</span><span class="p">[</span><span class="n">new_node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>
+
+    <span class="c1"># Add edges with updated node labels</span>
+    <span class="n">edge_colors</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">mapping</span> <span class="ow">and</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">mapping</span><span class="p">:</span>
+            <span class="n">new_source</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">source</span><span class="p">]</span>
+            <span class="n">new_target</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">new_source</span><span class="p">,</span> <span class="n">new_target</span><span class="p">)</span>
+            <span class="n">edge_colors</span><span class="p">[(</span><span class="n">new_source</span><span class="p">,</span> <span class="n">new_target</span><span class="p">)]</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span>
+
+    <span class="c1"># Define and add black edges manually with correct node names</span>
+    <span class="n">numbered_nodes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mapping</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">black_edge_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span>  <span class="c1"># though you&#39;re such a dot</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span>  <span class="c1"># more than the earth</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span>  <span class="c1"># you are   </span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="c1"># love</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="c1"># &amp; think</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">tgt</span> <span class="ow">in</span> <span class="n">black_edge_list</span><span class="p">:</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">tgt</span><span class="p">)</span>
+        <span class="n">edge_colors</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">tgt</span><span class="p">)]</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
+
+    <span class="c1"># Draw the graph</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> 
+        <span class="n">edge_color</span><span class="o">=</span><span class="p">[</span><span class="n">edge_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">],</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.2&quot;</span>
+    <span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;CG-BEST&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Run the visualization</span>
+<span class="n">visualize_nn</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/469898f5285453294f8275a9dbc38749a0cf6398ceaaa8a2a4bde744663d13fe.png" src="../_images/469898f5285453294f8275a9dbc38749a0cf6398ceaaa8a2a4bde744663d13fe.png" />
+</div>
+</div>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="figures/blanche.*"><img alt="figures/blanche.*" src="figures/blanche.*" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text"><em>Cosmogeology</em>. And yet, when I said my prayers to-day, A whisper inside me seemed to say, “You are more than the Earth, though you are such a dot: You can love and think, and the Earth cannot!” Source: <a class="reference external" href="https://en.wikipedia.org/wiki/William_Brighty_Rands">William Brighty</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>What struck me most wasn’t the aggression, but the complexity of it. This wasn’t just a dog reacting. It was a sentient bundle of loyalty, fear, power, and perception. It was enforcing order in a system that, to it, made perfect sense. And the more I thought about it, the more I realized I’d just witnessed an animal’s version of theology. Who is inside the covenant? Who belongs in the sanctuary? Who must wait at the door? These questions weren’t being asked in words. They were being decided in posture, scent, memory, and gaze.</p>
+<p>What the Rat Terrier offers isn’t warm companionship, but conditional loyalty. It doesn’t give its love away freely; it assigns it, tests it, revisits the decision. But once given, that love is fortified like a fortress. That’s what my sister tapped into—not the dog, but the gravitational pull of someone who had already passed through those gates. Her boyfriend made her feel safe enough to override a deeply rooted fear. And the dog, perceptive beyond reason, understood that contract. It honored her because she honored him. And it challenged me because I had not yet made my offering.</p>
+<style>
+.float-right {
+    float: right;
+    width: 35%;
+    height: auto;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+}
+
+.float-right p {
+    text-align: left;
+    font-size: 12px;
+}
+</style>
+
+<div class="float-right">
+    <img src="../figures/qrcode_podcasters.png" alt="Eco-Green QR Code" width="100%">
+    <p>The economic intelligence of nature: a visualization of dendritic structures, evoking parallels with neural networks, tree branches, and respiratory bronchioles.</p>
+</div><p>What I saw wasn’t just canine behavior. It was a myth playing out in real time. A story of borders and belonging. Of love’s power to rearrange fear. And of a small, muscular animal who understands what so many people forget: that affection isn’t cheap, that trust is earned, and that sometimes the fiercest guardians are also the truest mirrors.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./act2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="part2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Proof vs. Bias, 🏴‍☠️ 🪛</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Duality</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origins-americana-with-teeth">Origins: Americana with Teeth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personality-bright-bossy-and-busy">Personality: Bright, Bossy, and Busy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-small-body-nuclear-core">Energy: Small Body, Nuclear Core</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looks-lean-compact-and-purposeful">Looks: Lean, Compact, and Purposeful</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verdict-not-for-the-passive-owner">Verdict: Not for the passive owner</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Copyright © 2025 Zeus
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
